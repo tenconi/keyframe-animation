@@ -1,0 +1,739 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  padding-bottom: 70px;
+}
+html {
+  background: linear-gradient(#050519, 70%, #4d0745);
+}
+header {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  width: 100%;
+}
+header a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.15s;
+}
+header p {
+  font-weight: 100;
+  color: #80d8ff;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+header a:hover {
+  opacity: 0.8;
+  transition: 0.15s;
+}
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px 0;
+  color: #ffffff;
+}
+.brand {
+  height: 30px;
+}
+h1,
+h2,
+h3 {
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+p{
+  line-height: 1.5;
+}
+.title {
+  margin-bottom: 18px;
+  color: #80d8ff;
+}
+.description {
+  margin-bottom: 28px;
+}
+.result__title {
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+.result {
+  border: 1px solid #80d8ff;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: calc(40% - 20px) 60%;
+  column-gap: 20px;
+  padding: 20px;
+}
+.result .col {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+span.coment {
+  color: gray;
+}
+span.green {
+  color: #aeea00;
+}
+span.pink {
+  color: #f48fb1;
+}
+
+@media (max-width: 1024px) {
+  .result {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 20px;
+  }
+}
+
+/* --- EXAMPLE: CSS Animation ---  */
+
+#iso .st2 {
+  transition: 1s;
+  animation: 3s isoAnima infinite;
+  -webkit-animation: 3s isoAnima infinite;
+  -moz-animation: 3s isoAnima infinite;
+}
+
+@keyframes isoAnima {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, -12px);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  42%,
+  44% {
+    opacity: 0.3;
+    filter: blur(0px);
+  }
+  43%,
+  45% {
+    opacity: 0.75;
+    filter: blur(10px);
+  }
+  47% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  90% {
+    transform: translate(0, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes isoAnima {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, -12px);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  42%,
+  44% {
+    opacity: 0.3;
+    filter: blur(0px);
+  }
+  43%,
+  45% {
+    opacity: 0.75;
+    filter: blur(10px);
+  }
+  47% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  90% {
+    transform: translate(0, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@-moz-keyframes isoAnima {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, -12px);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  42%,
+  44% {
+    opacity: 0.3;
+    filter: blur(0px);
+  }
+  43%,
+  45% {
+    opacity: 0.75;
+    filter: blur(10px);
+  }
+  47% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  90% {
+    transform: translate(0, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.tFont,
+.tFont_stick {
+  fill-opacity: 0;
+  stroke: #80d8ff;
+  stroke-width: 2;
+  stroke-dasharray: 1370;
+  stroke-dashoffset: -1370;
+
+  stroke-miterlimit: 10;
+  animation: 2s tFont-anim forwards;
+  -webkit-animation: 2s tFont-anim forwards;
+  -moz-animation: 2s tFont-anim forwards;
+}
+@keyframes tFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes tFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes tFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+.eFont {
+  fill-opacity: 0;
+  stroke: #80d8ff;
+  stroke-width: 2;
+  stroke-dasharray: 1850;
+  stroke-dashoffset: 1850;
+  stroke-miterlimit: 10;
+
+  animation: 2s eFont-anim forwards;
+  -webkit-animation: 2s eFont-anim forwards;
+  -moz-animation: 2s eFont-anim forwards;
+  animation-delay: 500ms;
+}
+@keyframes eFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes eFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes eFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+.nFont {
+  fill-opacity: 0;
+  stroke: #80d8ff;
+  stroke-width: 2;
+  stroke-dasharray: 1550;
+  stroke-dashoffset: 1550;
+  stroke-miterlimit: 10;
+
+  animation: 2s nFont-anim forwards;
+  -webkit-animation: 2s nFont-anim forwards;
+  -moz-animation: 2s nFont-anim forwards;
+  animation-delay: 1000ms;
+}
+@keyframes nFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes nFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes nFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+.cFont {
+  fill-opacity: 0;
+  stroke: #80d8ff;
+  stroke-width: 2;
+  stroke-dasharray: 1450;
+  stroke-dashoffset: -1450;
+  stroke-miterlimit: 10;
+
+  animation: 2s cFont-anim forwards;
+  -webkit-animation: 2s cFont-anim forwards;
+  -moz-animation: 2s cFont-anim forwards;
+  animation-delay: 1500ms;
+}
+@keyframes cFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes cFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes cFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+.oFont,
+.oFont_stick {
+  fill-opacity: 0;
+  stroke: #80d8ff;
+  stroke-width: 2;
+  stroke-dasharray: 1010;
+  stroke-dashoffset: 1010;
+  stroke-miterlimit: 10;
+  animation: 2s oFont-anim forwards;
+}
+.oFont,
+.oFont_stick {
+  animation: 2s oFont-anim forwards;
+  -webkit-animation: 2s oFont-anim forwards;
+  -moz-animation: 2s oFont-anim forwards;
+  animation-delay: 2000ms;
+}
+@keyframes oFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes oFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes oFont-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+.oFont_stick {
+  animation: 2s oFontStick-anim forwards;
+  -webkit-animation: 2s oFontStick-anim forwards;
+  -moz-animation: 2s oFontStick-anim forwards;
+  animation-delay: 2200ms;
+}
+@keyframes oFontStick-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes oFontStick-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes oFontStick-anim {
+  70% {
+    fill-opacity: 0;
+  }
+  75% {
+    fill-opacity: 1;
+  }
+  78%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  81% {
+    fill-opacity: 0.7;
+  }
+  95% {
+    stroke: 0;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+#name {
+  opacity: 0;
+  animation: 10s name-anim infinite;
+  -webkit-animation: 10s name-anim infinite;
+  -moz-animation: 10s name-anim infinite;
+  animation-delay: 3100ms;
+  animation-delay: 2;
+}
+@keyframes name-anim {
+  75% {
+    opacity: 1;
+  }
+  81%,
+  83%,
+  85% {
+    opacity: 0.4;
+  }
+  82%,
+  84% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 01;
+  }
+}
+@-webkit-keyframes name-anim {
+  75% {
+    opacity: 1;
+  }
+  81%,
+  83%,
+  85% {
+    opacity: 0.4;
+  }
+  82%,
+  84% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 01;
+  }
+}
+@-moz-keyframes name-anim {
+  75% {
+    opacity: 1;
+  }
+  81%,
+  83%,
+  85% {
+    opacity: 0.4;
+  }
+  82%,
+  84% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 01;
+  }
+}
